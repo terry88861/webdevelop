@@ -1,2 +1,2 @@
 # webdevelop
-to show what i have learn on HTML and CSS.
+to show you what i have learn on HTML and CSS.
