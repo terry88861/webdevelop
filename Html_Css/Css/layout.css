@@ -1,0 +1,398 @@
+body {
+    background-color: rgb(168, 168, 168);
+    margin: 0px;   /* --- only the first level child of body inherit this  --- */
+    font-family: Arial, Helvetica, serif;
+    font-size: 14px;
+}
+
+.base {
+    background-color: rgb(176, 220, 180);
+    margin:  10px 15px;
+    border-radius: 8px;
+}
+#header {                  /* --- Center horizontally &  Vertically  --- */ 
+  box-sizing: border-box;  /* --- set width/height including the padding & border --- */
+                           /* --- height: 83px;  --- */
+  text-align: center;      /* --- Center horizontally  --- */
+  padding: 25px 0px;       /* --- Center Vertically - Using padding --- */
+}
+
+#header_flex {             /* --- Center Vertically - Using flex  --- */ 
+                           /* --- box-sizing: border-box; set width/height including the padding & border --- */
+  height: 83px;            /* --- height: 83px;  --- */
+  display: flex;           /* --- Center Vertically - Using flex     --- */ 
+  justify-content: center; /* ---                   .                --- */
+  align-items: center;     /* ---                   .                --- */
+}
+#header_lineht {           /* --- Center Vertically - Using line-height  --- */ 
+  line-height: 83px; 
+  height: 83px;            /* --- height: 83px;  --- */
+  text-align: center;      /* --- Center horizontally  --- */
+}
+     #header_lineht h2 {        /* --- Center Vertically - Using line-height  --- */ 
+        display: inline;        /* --- h2, h3 <tag> is a block element by defualt ---*/   
+        line-height: inherit ;  /* --- line-height: 1.5 ;  --- */       
+        vertical-align: middle; /* --- h2, h3 <tag> is a block element by defualt ---*/
+      }
+
+#header_transY {
+  text-align: center;       /* --- Center horizontally  --- */
+  height: 83px;             /* --- height: 83px;  --- */
+}
+     #header_transY h2 { 
+       display: inline-block ;   /* --- display: inline ; --- */              
+       margin: 0px ;
+        /* --- one --- */        /* --- Center Vertically - Using transform --- */
+       position: relative;    
+       top: 50%;                
+       -webkit-transform: translateY(-50%);  /* --- for chrome --- */
+       -ms-transform: translateY(-50%);      /* --- for MS IE, Edge --- */
+       transform: translateY(-50%);
+                                 /* --- Center Vertically - Using transform --- */
+     }
+      
+#header_transXY {
+      height: 83px;              /* --- height: 83px;  --- */
+      position: relative;  
+}
+     #header_transXY h2 {
+       display: inline-block ;   /* --- display: inline ; --- */              
+       margin: 0px ;
+       /* --- two --- */         /* --- Center Vertically & horizontally - Using transform --- */
+       position: absolute;  
+       top: 50%;
+       left: 50%;     
+       -webkit-transform: translate(-50%, -50%);  /* --- for chrome --- */
+       -ms-transform: translate(-50%, -50%);      /* --- for MS IE, Edge --- */
+       transform: translate(-50%, -50%);
+                                /* --- Center Vertically & horizontally - Using transform --- */
+     }
+
+
+#nav-bar {
+   height: 50px;
+}
+
+#nav-bar2 ul {             /* 設定#nav-bar2 之 UL 使用相同的 base class, 但取消了 height 限定  */
+  background-color: rgb(35, 4, 70);
+  padding: 5px 0px;
+  list-style-type: none; 
+  text-align: center; 
+}
+      #nav-bar2 ul li {
+          display:inline ;
+          /* ----  display:inline-block ;
+                       border-width: 2px ;
+                       border-style:solid ;
+                       border-color: yellowgreen ;
+                   border: 2px solid yellowgreen ;
+             ----
+          */
+      }
+      #nav-bar2 ul li a {
+        color: rgb(243, 243, 167) ;
+        text-decoration: none;
+        padding: 2px 15px ;
+        font-size: 120%;
+        font-weight: bold;
+      }
+      #nav-bar2 ul li a:hover{
+        background-color: white;
+        color: black ;
+        border: 1px solid black ;
+        border-radius: 5px;
+      }
+
+.main {
+  background-color: white;
+  font-size: 110%;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 30px;
+}
+
+#footer {
+  height: 60px;
+  clear:both;
+}
+#footer2 {
+  clear:both;
+  text-align: center;
+}
+      #footer2 ul {
+        margin: 0px;
+        padding: 10px 0px;
+        list-style-type: none; 
+        text-align: center; 
+      }
+      #footer2 ul li{
+        display: inline;
+      }
+      #footer2 ul li a{
+        color: brown;
+        text-decoration: none;
+        padding: 2px 12px ;
+        font-weight: bold;
+      }
+      #footer2 ul li a:hover{
+        background-color: white;
+        color: green ;
+        border: 1px solid green ;
+        border-radius: 5px;
+      }
+
+h2 {
+   margin:  5px;
+   color: rgb(180,0,0);
+   font-size: 200%;
+}
+    h2.hd {                    /* --- h2, h3 <tag> is a block element by defualt ---*/
+       display: inline;        /* --- display: inline-block ; ---*/
+    }
+
+h3 {                  
+   margin:  5px;
+   color: rgb(180,0,0);
+   font-size: 130%;
+}
+    h3.hd {                   /* --- Left and Right Align - Using position --- */
+       position: absolute;    /* ---                                       --- */
+       right: 15px;      
+       display: inline ;      /*  --- h2, h3 <tag> is a block element by defualt---*/ 
+       padding-top: 8px;     /* --- Center Vertically - Using padding --- */                        
+    }
+    h3.hd_float {             /* --- Left and Right Align - Using position --- */
+        float:right;          /* ---                                       --- */
+        display: inline ;
+        padding-top: 8px;
+    }
+   
+
+
+dt {
+  color :rgb(0, 0, 150) ;
+  background-color:rgb(238, 238, 58) ;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 110%;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding: 3px 5px;
+  box-shadow: 4px 3px 5px grey;
+}
+#wk_header dt {
+  text-decoration: underline;
+}
+#wk_header dt:hover {
+  background-color: rgb(185, 221, 238);
+  text-decoration: none;
+}
+#wk_header dt a:hover {
+  background-color: rgb(185, 221, 238) ;
+  color: white;
+  text-shadow: 2px 2px 1px brown ;
+  text-decoration: none;
+}
+
+.list {                      /* --- Center Vertically & horizontally - Using Flex --- */
+   display: flex; 
+   align-items: center; 
+   justify-content:center;
+}
+   .list.column {
+      list-style-type: none ;
+      display: inline-block;
+      margin: 0px;
+      padding-right: 50px;
+      padding-left: 50px;
+      /* ---
+         float: left;             --- display: inline-block; ---   
+         box-sizing: border-box; 
+         width: 50%;
+         --- 
+      */
+    }
+ul.sidebar{
+  list-style-type: none ;
+}
+ /* ---  text-overflow: ellipsis
+   li {
+      white-space: nowrap; 
+      overflow: hidden;
+      text-overflow: ellipsis ;
+    }
+    ---
+ */
+   .sidebar li:hover {
+       display: inline-block;
+       filter: drop-shadow( 3px 3px 5px black); 
+       background-color: rgb(176, 220, 180);
+    }
+   .sidebar li a:hover {
+       color:  red;
+       font-weight: bold;
+       font-size: large;
+    }
+
+img {           /* --- width: 80%; centerize the image and keep it RWD --- */
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    height: auto;
+}
+    figcaption {
+        color:  rgb(26, 179, 26);
+        font-weight: bold;
+        font-size: 120% ;
+    }
+
+    img.float_right {
+        float: right; 
+        padding: 20px;
+    }
+
+      /* --- If an element is taller than the element containing it, and it is floated, 
+              it will overflow outside of its container. 
+         --- 
+      */
+    .clearfix::after {
+          content: "";
+          clear: both;
+          display: table;
+    }
+
+    img.filter {                        /* --- 在 4秒 second內完成 mymove 的漸進變動 --- */
+        animation: mymove 4s infinite;
+    }    
+        @keyframes mymove {             /* --- 設定亮度及對比度 漸進變動 --- */
+          80% {
+            -webkit-filter: brightness(200%); 
+            filter: brightness(200%);
+          }
+          100% {
+            -webkit-filter: contrast(180%); 
+            filter: contrast(180%);
+          }
+        }
+    img.shadow:hover { 
+      filter: drop-shadow( 10px 8px 12px black);
+    }
+    img.filter:hover {
+      filter: drop-shadow( 8px 6px 8px black);
+    }
+
+p {
+  text-indent : 25px ;
+}
+
+strong {
+  color :rgb(0, 0, 150) ;
+}
+
+mark {
+  color :rgb(0, 0, 150) ;
+  background-color:rgb(220, 220, 220) ;
+  font-weight: bold;
+}
+
+mark.red {
+  color :red ;
+}
+
+.sideright {
+  background-color: rgb(190, 200, 235);
+  font-size: 105%;
+  margin: 10px;
+                  /* --- 兩個皆非floating in 文件Flow 相鄰的元素中的間隔, 只留margin最大的那一邊的長度 --- */
+  margin-top: 0px;
+  margin-right: 30px;
+  border-radius: 8px;
+  padding: 15px; 
+                  /* --- 若其中有 floating 元素, 兩個相鄰的元素中的間隔, 是兩者的 margin 長度的加總 --- */
+  float: right ;
+  width: 280px;
+                  /* --- clear: both /right --- */
+  clear: right ;
+}
+
+.img_sidebar {
+  margin: 10px;
+
+  margin-top: 0px;
+  margin-right: 30px;
+  border-radius: 8px;
+
+  float: right ;
+  width: 310px;  /* ---  width: 280px + ( padding: 15px * 2 )  --- */
+  clear: both; 
+            
+  opacity: 1.0;   /* --- transition: Change Several Property Values --- */
+  transition: opacity 2s ease-in-out, width 3s ;
+                  /* --- specifies the speed curve of the transition
+                         effect with a slow start and end --- */
+}
+    .img_sidebar:hover { 
+         opacity: 0.3;
+         width: 300px;
+    }
+
+.sideright.bar3 {
+   box-sizing: border-box; 
+   width: 23%;
+}
+.main.bar3 {
+   box-sizing: border-box;  
+   width: 72%;
+}
+/* Create two unequal columns that floats next to each other */
+.column {
+  border-radius: 8px;
+  box-sizing: border-box;
+  float: left;
+  padding: 10px;
+}
+
+/* Create two unequal left and right column */
+.column.right {
+  background-color: rgb(190, 200, 235);
+  font-size: 95%;
+  width: 25%;
+}
+
+.column.left {
+  width: 75%;
+}
+
+/* Clear floats after the columns */
+.row:after {    /* --- adding something at the end of those selected element--- */
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* --- Responsive layout - 
+       makes the three columns stack on top of each other instead of next to each other 
+   --- 
+*/
+@media screen and (max-width: 940px) {
+    .column.right, .column.left {
+        width: 100%;
+    }
+  /* --- Responsive layout ---
+    .main.bar3, .sideright.bar3 {
+        width: 92%;
+    }
+     ---  
+  */ 
+}
+
+/* --- Responsive layout ---
+@media screen and (max-width: 800px) {
+    h2.hd, h3.hd {
+       width: 100%;
+    }
+}
+ --- */ 
+
+
+  
